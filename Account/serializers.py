@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from Account.models import User
+from Account.models import User, ToDo
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -13,3 +13,8 @@ class UserSerializer(serializers.ModelSerializer):
             'mobile',
             'gender'
         ]
+
+class ToDoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ToDo
+        fields = '__all__'
